@@ -1,0 +1,18 @@
+{
+  "name": "audiolet-midi",
+  "version": "1.0.0",
+  "description": "MIDI control for your Audiolet patches",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kn0ll/audiolet-midi.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist/ && cp package.json dist/"
+  },
+  "author": "Nic Luciano <nic@kn0ll.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kn0ll/audiolet-midi/issues"
+  },
+  "homepage": "https://github.com/kn0ll/audiolet-midi#readme"
+}
