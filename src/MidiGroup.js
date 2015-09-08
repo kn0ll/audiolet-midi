@@ -44,26 +44,31 @@ class MidiGroup extends AudioletGroup {
       }
     }
 
-    this.channels = {
+    this.commands = {
       144: 'noteOn',
       128: 'noteOff'
     };
 
-    this.midiIn = this.inputs[midiIn];
-    this.midiOut = this.outputs[midiOut];
+    if (midiIn) {
+      this.midiIn = this.inputs[midiIn];
+    }
+
+    if (midiOut) {
+      this.midiOut = this.outputs[midiOut];
+    }
   }
 
-  midi(channel, key, vel) {
-    let method = this[this.channels[channel]].bind(this);
+  midi(command, key, vel) {
+    let method = this[this.commands[command]].bind(this);
     method(key, vel);
   }
 
   noteOn(key, vel) {
-    this.midiOut.send(144, key, vel);
+    this.midiOut && this.midiOut.send(144, key, vel);
   }
 
   noteOff(key, vel) {
-    this.midiOut.send(128, key, vel);
+    this.midiOut && this.midiOut.send(128, key, vel);
   }
 
 }
