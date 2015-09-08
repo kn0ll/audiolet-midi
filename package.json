@@ -1,6 +1,6 @@
 {
   "name": "audiolet-midi",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "MIDI control for your Audiolet patches",
   "repository": {
     "type": "git",
