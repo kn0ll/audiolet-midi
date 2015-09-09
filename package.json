@@ -7,12 +7,17 @@
     "url": "git+https://github.com/kn0ll/audiolet-midi.git"
   },
   "scripts": {
-    "build": "babel src --out-dir dist/ && cp package.json dist/"
+    "build": "babel src --out-dir lib/ && cp package.json lib/",
+    "prepublish": "npm run-script build"
   },
+  "main": "lib/index.js",
   "author": "Nic Luciano <nic@kn0ll.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kn0ll/audiolet-midi/issues"
   },
-  "homepage": "https://github.com/kn0ll/audiolet-midi#readme"
+  "homepage": "https://github.com/kn0ll/audiolet-midi#readme",
+  "dependencies": {
+    "audiolet": "https://github.com/kn0ll/Audiolet/archive/feature/es6.zip"
+  }
 }
