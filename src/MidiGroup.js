@@ -49,13 +49,8 @@ class MidiGroup extends AudioletGroup {
       128: 'noteOff'
     };
 
-    if (midiIn) {
-      this.midiIn = this.inputs[midiIn];
-    }
-
-    if (midiOut) {
-      this.midiOut = this.outputs[midiOut];
-    }
+    this.midiIn = this.inputs[midiIn];
+    this.midiOut = this.outputs[midiOut];
   }
 
   midi(command, key, vel) {
